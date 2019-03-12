@@ -3,11 +3,13 @@ var bodyParser = require('body-parser');
 var port = 3000
 
 var app = express()
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static('public'))
 
 app.get('/', function (req, res) {
-  res.send('Hello, World!');
+  res.sendFile('public/index.html');
 });
 
 app.get('/query', function (req, res) {
