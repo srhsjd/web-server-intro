@@ -4,11 +4,14 @@
   "description": "23-codestreet web intro project",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "license": "BSD-3-Clause",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }

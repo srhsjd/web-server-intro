@@ -3,19 +3,17 @@ var bodyParser = require('body-parser');
 var port = 3000
 
 var app = express()
-app.use(bodyParser.urlencoded({ extended: false }));  
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send('Hello, World!');
 });
 
-function anotherGetHandler(req, res) {
+app.get('/query', function (req, res) {
   console.log(req.query);
   res.send('Another One');
-}
-
-app.get('/another', anotherGetHandler);
+});
 
 app.post('/somedata', function (req, res) {
   if (req.query) {
