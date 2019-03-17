@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My App</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img alt="logo" src="img/logo.png">
+  </header>
+
+  <main class="container">
+    <h1 class="title">Chatting!</h1>
+
+    <ul id="chatlog">
+    </ul>
+    <br>
+
+    <form id="chatentry" name="chatentry">
+      <label for="username">Username</label> <input type="text" name="username"><br>
+      <label for="text">Message</label> 
+
+      <textarea rows="4" cols="50" name="text"></textarea><br>
+      <input id="sendbutton" type="submit" value="Submit">
+    </form>
+  </main>
+
+  <footer>
+    © 23 Code Street 2018.
+  </footer>
+  <script src="js/ajax.js"></script> 
+  <script src="js/client.js"></script>
+</body>
+</html>
